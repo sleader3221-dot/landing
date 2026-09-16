@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/images/dukanselogo.webp" alt="DukaanSe Logo" width="120" />
+  <img src="./public/images/dukanselogo.webp" alt="DukaanSe Logo" width="120" />
 </p>
 
 # DukaanSe — Landing Page
