@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const scrollbarHide = require('tailwind-scrollbar-hide');
+
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -18,9 +20,16 @@ export default {
           dark: '#15803D',
         },
       },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 25s linear infinite',
+      },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar-hide'),
-  ],
+  plugins: [scrollbarHide],
 };
