@@ -1,9 +1,11 @@
 "use client";
 
-import useFaq from "../hooks/useFaq";
+import { fallbackFaqs } from "../services/faqService";
+// import useFaq from "../hooks/useFaq"; // TEMPORARY: API integration disabled, using static data for now
 
 export default function FAQ() {
-  const { faqs, loading, error } = useFaq();
+  // const { faqs, loading, error } = useFaq(); // TEMPORARY: commented out
+  const faqs = fallbackFaqs; // TEMPORARY: static data directly
 
   const renderAnswer = (text) => {
     const parts = text.split("**");
@@ -18,11 +20,12 @@ export default function FAQ() {
     );
   };
 
-  if (loading)
-    return <p className="text-center py-16 text-gray-500">Loading...</p>;
+  // TEMPORARY: loading/error states commented out since we're not calling the API right now
+  // if (loading)
+  //   return <p className="text-center py-16 text-gray-500">Loading...</p>;
 
-  if (error)
-    return <p className="text-center py-16 text-red-500">{error}</p>;
+  // if (error)
+  //   return <p className="text-center py-16 text-red-500">{error}</p>;
 
   return (
     <section className="bg-white py-16 sm:py-18">

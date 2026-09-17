@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fallbackFaqs = [
+export const fallbackFaqs = [
   {
     _id: "faq-1",
     question: "What is DukaanSe?",
