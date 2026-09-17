@@ -10,11 +10,25 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Hide scrollbar but keep scrolling functional */
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE / old Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, new Edge */
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
   color: #111827;
+  overflow-x: hidden; /* extra safety: kills any accidental horizontal scrollbar too */
 }
 
 a {
