@@ -45,13 +45,20 @@ const api = axios.create({
 })
 
 
-export const getAllFaqWithAnswer = async() =>{
+export const getAllFaqWithAnswer = async () => {
     try {
         const response = await api.get("/adminFaq/getFAQWithQuestionAndAnswer");
-        // console.log(response.data);
-        return response.data.faqs;
+        const faqs = response.data.faqs;
+
+        // Check if API returned empty array
+        if (!faqs || faqs.length === 0) {
+            console.warn("API returned empty FAQs, using fallback data");
+            return fallbackFaqs;
+        }
+
+        return faqs;
     } catch (error) {
-        console.error("Error fetching FAQs:", error);
+        console.error("Error fetching FAQs, using fallback data:", error);
         return fallbackFaqs;
     }
-}
+};
