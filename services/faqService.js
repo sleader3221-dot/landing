@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const fallbackFaqs = [
   {
     _id: "faq-1",
@@ -37,21 +39,19 @@ const fallbackFaqs = [
   },
 ];
 
-export const getAllFaqWithAnswer = async () => {
-  try {
-    const response = await fetch("/api/faqs", { signal: AbortSignal.timeout(5000) });
+const api = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
+    withCredentials: true
+})
 
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+
+export const getAllFaqWithAnswer = async() =>{
+    try {
+        const response = await api.get("/adminFaq/getFAQWithQuestionAndAnswer");
+        // console.log(response.data);
+        return response.data.faqs;
+    } catch (error) {
+        console.error("Error fetching FAQs:", error);
+        return fallbackFaqs;
     }
-
-    const payload = await response.json();
-
-    if (Array.isArray(payload)) return payload;
-    if (payload && Array.isArray(payload.faqs)) return payload.faqs;
-    if (payload && Array.isArray(payload.data)) return payload.data;
-    return fallbackFaqs;
-  } catch {
-    return fallbackFaqs;
-  }
-};
+}
