@@ -9,8 +9,8 @@ import GullakCalculator from '@/components/home/GullakCalculator';
 import { CUSTOMER_APP, PARTNER_APP, pageMetadata } from '@/lib/site';
 
 export const metadata = pageMetadata(
-  'DukaanSe: order from your neighbourhood kirana, pick up on your way',
-  'Order from the kirana you already trust, pick it up on your way, and save up to 25% with Gullak coins. No minimum order. Delivery when you need it.',
+  'DukaanSe - Flat 25% OFF*',
+  '*Offer applies to pickup orders using available Gullak coins, up to 25% of item value and a maximum of 100 coins per order. No minimum order.',
   '/',
 );
 
@@ -47,7 +47,7 @@ export default function HomePage() {
       <main id="main">
         <section className="hero" aria-labelledby="hero-title"><div className="wrap">
           <div>
-            <h1 id="hero-title">Order karo phone se.<span className="l2">Pick up karo <span className="ds">Dukaan<span className="se">Se</span></span>.</span></h1>
+            <h1 id="hero-title"><span className="hero-line">Order karo <span className="ds">phone se,</span></span><span className="hero-line l2"><span>Pick up karo </span><span className="ds">Dukaan<span className="se">Se</span>.</span></span></h1>
             <p className="lede">Order from the neighbourhood kirana you already trust. Bhaiya packs it, you pick it up on your way, and Gullak coins take up to 25% off.*</p>
             <div className="cta-row"><a className="gplay" href={CUSTOMER_APP} aria-label="Get DukaanSe on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a><span className="soon">iPhone app coming soon</span></div>
             <ul className="facts" aria-label="Good to know"><li>No minimum order</li><li>Pick up anytime</li><li>Delivery when you need it</li></ul>
@@ -57,7 +57,7 @@ export default function HomePage() {
 
         <section className="addk" aria-label="Add your kirana"><div className="wrap"><div className="inner">
           <div className="coin" aria-hidden="true">100</div>
-          <div><strong>Your kirana isn't on DukaanSe yet?</strong><p>Add it from the app and earn 100 Gullak coins once it goes live. We're adding new kiranas every week.</p></div>
+          <div><strong>Your kirana isn't on <span className="ds">Dukaan<span className="se">Se</span></span> yet?</strong><p>Add it from the app and earn 100 Gullak coins once it goes live. We're adding new kiranas every week.</p></div>
           <a className="btn" href={CUSTOMER_APP}>Add your kirana</a>
         </div></div></section>
 
@@ -76,7 +76,7 @@ export default function HomePage() {
         <section className="day" aria-labelledby="d-title"><div className="wrap">
           <div className="top-row">
             <h2 id="d-title">Fits into the day you already have.</h2>
-            <p className="lede">You already pass your kirana a dozen times a week. Pick a moment and see how DukaanSe fits in.</p>
+            <p className="lede">You already pass your kirana a dozen times a week. Pick a moment and see how <span className="ds">Dukaan<span className="se">Se</span></span> fits in.</p>
           </div>
           <Moments />
         </div></section>
@@ -138,10 +138,10 @@ export default function HomePage() {
             <h2 id="k-title">Your dukaan.<span className="l2">Now on every phone nearby.</span></h2>
             <p className="lede" style={{ marginTop: 20 }}>Get digital orders from your own neighbourhood, without turning your shop into a warehouse.</p>
             <ul className="perks">
-              <li><strong>Zero commission</strong><span>for your first 24 months on DukaanSe.</span></li>
+              <li><strong>Zero commission</strong><span>for your first 24 months on <span className="ds">Dukaan<span className="se">Se</span></span>.</span></li>
               <li><strong>No new stock or staff</strong><span>Sell what's already on your shelves.</span></li>
               <li><strong>Prepaid orders</strong><span>Customers pay in the app before they arrive.</span></li>
-              <li><strong>Discounts are on us</strong><span>Gullak coins are funded by DukaanSe. You get your full price.</span></li>
+              <li><strong>Discounts are on us</strong><span>Gullak coins are funded by <span className="ds">Dukaan<span className="se">Se</span></span>. You get your full price.</span></li>
             </ul>
             <div className="k-cta"><a className="gplay" href={PARTNER_APP} aria-label="Get the DukaanSe Partner app on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a></div>
             <p className="small">Download the DukaanSe Partner app to register your shop. Read the <Link href="/merchant-agreement/">Merchant Onboarding Agreement</Link>, or write to <a href={merchantEmailLink} target="_blank" rel="noreferrer noopener">merchants@dukaanseindia.com</a>.</p>
@@ -149,11 +149,11 @@ export default function HomePage() {
         </div></section>
 
         <section className="story" aria-labelledby="s-title"><div className="wrap">
-          <p className="kicker" id="s-title">Why we built <span className="ds">Dukaan<span className="se">Se</span></span></p>
+          <p className="kicker" id="s-title">Why we built <span className="ds">Dukaan<span className="se">Se</span></span>?</p>
           <blockquote className="story-q"><p>“We kept seeing people pay to have milk brought from a shop 300 metres away. The shop was right there. It just wasn’t on their phone.”</p></blockquote>
           <div className="story-body">
             <p>That stuck with us. Your neighbourhood kirana already knows your family’s usual atta and which biscuits the kids like. It didn’t need replacing. It just needed to be one tap away.</p>
-            <p>So we built DukaanSe. You order from the shop you already trust, pick it up on your way, and get rewarded every time you walk in. We’re starting in Mumbai and growing the way kiranas do: one neighbourhood at a time.</p>
+            <p>So we built <span className="ds">Dukaan<span className="se">Se</span></span>. You order from the shop you already trust, pick it up on your way, and get rewarded every time you walk in. We’re starting in Mumbai and growing the way kiranas do: one neighbourhood at a time.</p>
           </div>
         </div></section>
 
@@ -161,7 +161,7 @@ export default function HomePage() {
           <div><h2 id="f-title">Questions, answered.</h2><p className="help">Still stuck? Write to <a href={supportEmailLink} target="_blank" rel="noreferrer noopener">support@dukaanseindia.com</a>.</p></div>
           <div>
             <details><summary><span>What is <span className="ds">Dukaan<span className="se">Se</span></span>?</span></summary><p>An app for ordering from the kiranas near you. You order on your phone, the shop packs it, and you pick it up when you pass by. Can't step out? Choose delivery instead.</p></details>
-            <details><summary><span>Is DukaanSe available near me?</span></summary><p>We're starting in Mumbai and adding kiranas every week. Open the app to see the ones near you. If your favourite kirana isn't there yet, add it from the app.</p></details>
+            <details><summary><span>Is <span className="ds">Dukaan<span className="se">Se</span></span> available near me?</span></summary><p>We're starting in Mumbai and adding kiranas every week. Open the app to see the ones near you. If your favourite kirana isn't there yet, add it from the app.</p></details>
             <details><summary><span>Is there a minimum order?</span></summary><p>No. Order a single packet of milk or a whole month's groceries.</p></details>
             <details><summary><span>How does pickup work?</span></summary><p>Choose Pickup at checkout and your kirana packs the order. When you get there, show the OTP in the app and take your bag. No queue, no waiting.</p></details>
             <details><summary><span>How do Gullak coins work?</span></summary><p>You get 50 coins when you sign up, 50 when a friend you refer places their first order, and 100 for every kirana you add once it goes live. You also earn coins back on every order. Use them on pickup orders for up to 25% off, up to 100 coins per order. 1 coin = ₹1, and coins are valid for 30 days.</p></details>

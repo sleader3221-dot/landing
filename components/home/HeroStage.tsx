@@ -27,7 +27,6 @@ export default function HeroStage() {
 
   return (
     <div className="stage" aria-label="An order being packed at a neighbourhood kirana">
-      <div className="block"></div>
       <img className="photo" src="/assets/img/customer.webp" alt="A customer showing his DukaanSe order to the kirana owner at the counter" width="940" height="513" />
       <div className="phone" aria-hidden="true"><div className="screen">
         <div><div className="sub">Pickup from</div><div className="store">Sharma Kirana</div><div className="sub">4 items, ₹273</div></div>

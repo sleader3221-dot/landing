@@ -24,7 +24,7 @@ export default function Footer({ home = false }: { home?: boolean }) {
       <div>
         <span className="brand" style={{ marginBottom: 14 }}><img className="mark" src="/assets/img/icon.svg" alt="" width="34" height="34" /><span className="wm" aria-hidden="true">Dukaan<span className="se">Se</span></span></span>
         <p>The digital layer for India&apos;s neighbourhood kiranas.</p>
-        <p style={{ marginTop: 12 }}>DukaanSe is owned and operated by Vyaptra Solutions Private Limited, Mumbai. CIN: U47912MH2025PTC454001</p>
+        <p style={{ marginTop: 12 }}><span className="ds">Dukaan<span className="se">Se</span></span> is owned and operated by Vyaptra Solutions Private Limited, Mumbai.</p>
       </div>
       <div>
         <h4>Help</h4>
@@ -45,7 +45,7 @@ export default function Footer({ home = false }: { home?: boolean }) {
           <li><Link href="/merchant-agreement/">Merchant Onboarding Agreement</Link></li>
         </ul>
       </div>
-      <div className="legal"><span>© 2026 Vyaptra Solutions Private Limited. All rights reserved.</span><span>Made in India, for every neighbourhood.</span></div>
+      <div className="legal"><span>© 2026 Vyaptra Solutions Private Limited. All rights reserved. CIN: U47912MH2025PTC454001</span><span>Made in India, for every neighbourhood.</span></div>
     </div></footer>
   );
 }
