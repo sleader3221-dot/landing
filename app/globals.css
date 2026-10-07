@@ -30,6 +30,8 @@ section{padding:104px 0}
 .wm{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;letter-spacing:-.01em;color:var(--text);transform:translateY(2px)}
 .wm .se,.ds .se{display:inline-block;line-height:1;vertical-align:middle;color:var(--sindoor)}
 .ds{color:var(--text)}
+.brand-word{display:inline-flex;align-items:baseline;line-height:1;vertical-align:baseline}
+.brand-word .se{font-size:1em;line-height:1;vertical-align:baseline}
 .kiranas .ds{color:#FFF8EC}
 .brand .rev{display:none}
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .brand .std{display:none} :root:not([data-theme="light"]) .brand .rev{display:block} }

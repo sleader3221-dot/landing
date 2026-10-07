@@ -76,7 +76,7 @@ export default function HomePage() {
         <section className="day" aria-labelledby="d-title"><div className="wrap">
           <div className="top-row">
             <h2 id="d-title">Fits into the day you already have.</h2>
-            <p className="lede">You already pass your kirana a dozen times a week. Pick a moment and see how <span className="ds">Dukaan<span className="se">Se</span></span> fits in.</p>
+            <p className="lede">You already pass your kirana a dozen times a week. Pick a moment and see how <span className="ds brand-word">Dukaan<span className="se">Se</span></span> fits in.</p>
           </div>
           <Moments />
         </div></section>
