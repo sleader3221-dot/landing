@@ -1,0 +1,28 @@
+DUKAANSE WEBSITE: NEXT.JS PROJECT & UPLOAD GUIDE (Hostinger / Static Hosting)
+
+This project is a modern Next.js 16+ application (App Router, TypeScript, React 19).
+
+LOCAL DEVELOPMENT:
+1. Run development server on port 3005 (or default 3000):
+   npm run dev -- -p 3005
+   Visit: http://localhost:3005
+
+PRODUCTION BUILD / STATIC EXPORT:
+2. Build the optimized static website:
+   npm run build
+   This generates the production export in the "out" folder.
+
+HOW TO UPLOAD (Hostinger public_html):
+3. Back up existing public_html files.
+4. Upload everything INSIDE the "out" folder directly into public_html.
+   Ensure ".htaccess" is uploaded (enable "show hidden files" in Hostinger File Manager).
+5. Visit https://www.dukaanseindia.com/ and test all pages.
+
+PAGES & ROUTES:
+/                      Home (Hero with animated OTP, Moments, Picker, Gullak Calculator, Kiranas, FAQs)
+/terms/                Terms of Use
+/privacy/              Privacy Policy
+/refunds/              Refund & Cancellation Policy
+/merchant-agreement/   Merchant Onboarding Agreement
+/404.html              Custom Page Not Found
+/robots.txt, /sitemap.xml for Search Engines
