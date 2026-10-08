@@ -173,6 +173,8 @@ input[type=range]{width:100%;margin-top:10px;accent-color:var(--sindoor);height:
 .kiranas .brand-word{color:#CDBFAE}
 .kiranas .download-brand-name{color:#CDBFAE}
 .kiranas .download-brand-se{color:#D7261A}
+.kiranas .heading-brand-name{color:#FFFFFF}
+.kiranas .heading-brand-se{color:#D7261A}
 .kiranas h2 .l2{display:block;color:var(--genda)}
 .perks{list-style:none;padding:0;margin:32px 0 36px;display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
 .perks strong{display:block;font-size:19px;color:#FFF8EC}
