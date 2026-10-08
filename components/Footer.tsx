@@ -22,9 +22,9 @@ export default function Footer({ home = false }: { home?: boolean }) {
   return (
     <footer className="site"><div className="wrap">
       <div>
-        <span className="brand" style={{ marginBottom: 14 }}><img className="mark" src="/assets/img/icon.svg" alt="" width="34" height="34" /><span className="wm" aria-hidden="true">Dukaan<span className="se">Se</span></span></span>
+        <span className="brand" style={{ marginBottom: 14 }}><img className="mark" src="/assets/img/icon.svg" alt="" width="34" height="34" /><span className="wm brand-word" aria-hidden="true">Dukaan<span className="se">Se</span></span></span>
         <p>The digital layer for India&apos;s neighbourhood kiranas.</p>
-        <p style={{ marginTop: 12 }}><span className="ds">Dukaan<span className="se">Se</span></span> is owned and operated by Vyaptra Solutions Private Limited, Mumbai.</p>
+        <p style={{ marginTop: 12 }}><span className="ds brand-word">Dukaan<span className="se">Se</span></span> is owned and operated by Vyaptra Solutions Private Limited, Mumbai.</p>
       </div>
       <div>
         <h4>Help</h4>
@@ -49,3 +49,5 @@ export default function Footer({ home = false }: { home?: boolean }) {
     </div></footer>
   );
 }
+
+

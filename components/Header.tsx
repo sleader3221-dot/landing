@@ -7,7 +7,7 @@ export default function Header({ home = false }: { home?: boolean }) {
   const h = home ? '' : '/';
   return (
     <header className="top"><div className="wrap">
-      <Link className="brand" href="/" aria-label="DukaanSe home"><img className="mark" src="/assets/img/icon.svg" alt="" width="38" height="38" /><span className="wm" aria-hidden="true">Dukaan<span className="se">Se</span></span></Link>
+      <Link className="brand" href="/" aria-label="DukaanSe home"><img className="mark" src="/assets/img/icon.svg" alt="" width="38" height="38" /><span className="wm brand-word" aria-hidden="true">Dukaan<span className="se">Se</span></span></Link>
       <nav className="links" aria-label="Main">
         <a href={`${h}#how`}>How it works</a><a href={`${h}#compare`}>Pickup or delivery</a><a href={`${h}#gullak`}>Gullak</a><a href={`${h}#kiranas`}>For kiranas</a><a href={`${h}#faq`}>FAQ</a>
       </nav>
@@ -15,3 +15,4 @@ export default function Header({ home = false }: { home?: boolean }) {
     </div></header>
   );
 }
+
