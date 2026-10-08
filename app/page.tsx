@@ -144,7 +144,7 @@ export default function HomePage() {
               <li><strong>Discounts are on us</strong><span>Gullak coins are funded by <span className="ds brand-word">Dukaan<span className="se">Se</span></span>. You get your full price.</span></li>
             </ul>
             <div className="k-cta"><a className="gplay" href={PARTNER_APP} aria-label="Get the DukaanSe Partner app on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a></div>
-            <p className="small">Download the DukaanSe Partner app to register your shop. Read the <Link href="/merchant-agreement/">Merchant Onboarding Agreement</Link>, or write to <a href={merchantEmailLink} target="_blank" rel="noreferrer noopener">merchants@dukaanseindia.com</a>.</p>
+            <p className="small">Download the <span className="download-brand-name">Dukaan<span className="download-brand-se">Se</span></span> Partner app to register your shop. Read the <Link href="/merchant-agreement/">Merchant Onboarding Agreement</Link>, or write to <a href={merchantEmailLink} target="_blank" rel="noreferrer noopener">merchants@dukaanseindia.com</a>.</p>
           </div>
         </div></section>
 
