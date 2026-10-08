@@ -135,7 +135,7 @@ export default function HomePage() {
         <section className="kiranas" id="kiranas" aria-labelledby="k-title"><div className="wrap">
           <img src="/assets/img/seller.webp" alt="A kirana owner standing proudly at his counter" width="950" height="556" loading="lazy" />
           <div>
-            <h2 id="k-title">Your dukaan.<span className="l2">Now on every phone nearby.</span></h2>
+            <h2 id="k-title">Your <span className="ds brand-word">Dukaan<span className="se">Se</span></span>, <span className="l2">Now on every phone nearby.</span></h2>
             <p className="lede" style={{ marginTop: 20 }}>Get digital orders from your own neighbourhood, without turning your shop into a warehouse.</p>
             <ul className="perks">
               <li><strong>Zero commission</strong><span>for your first 24 months on <span className="ds brand-word">Dukaan<span className="se">Se</span></span>.</span></li>
