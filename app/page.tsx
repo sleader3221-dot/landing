@@ -47,7 +47,7 @@ export default function HomePage() {
       <main id="main">
         <section className="hero" aria-labelledby="hero-title"><div className="wrap">
           <div>
-            <h1 id="hero-title"><span className="hero-line">Order karo <span className="ds">phone se.</span></span><span className="hero-line l2"><span>Pick up karo </span><span className="ds brand-word">Dukaan<span className="se">Se</span></span></span></h1>
+            <h1 id="hero-title"><span className="hero-line">Order karo <span className="ds">phone se,</span></span><span className="hero-line l2"><span>Pick up karo </span><span className="ds brand-word">Dukaan<span className="se">Se</span>.</span></span></h1>
             <p className="lede">Order from the neighbourhood kirana you already trust. Bhaiya packs it, you pick it up on your way, and Gullak coins take up to 25% off.*</p>
             <div className="cta-row"><a className="gplay" href={CUSTOMER_APP} aria-label="Get DukaanSe on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a><span className="soon">iPhone app coming soon</span></div>
             <ul className="facts" aria-label="Good to know"><li>No minimum order</li><li>Pick up anytime</li><li>Delivery when you need it</li></ul>
