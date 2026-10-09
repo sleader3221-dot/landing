@@ -52,7 +52,7 @@ nav.links a:hover{color:var(--text)}
 @media (max-width:880px){ nav.links{display:none} }
 
 /* hero */
-.hero{padding:84px 0 44px;overflow:hidden}
+.hero{padding:32px 0 24px;overflow:hidden}
 .hero .wrap{max-width:1240px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
 .hero-copy{margin:0;text-align:left}
 .hero-message{width:100%}
@@ -61,13 +61,19 @@ nav.links a:hover{color:var(--text)}
 .hero h1 .l2{margin-top:0;color:var(--text)}
 .hero h1 .pickup-copy{color:var(--sindoor)}
 .hero h1 .l2 .brand-word{color:var(--text)}
-.hero-details{margin:40px 0 0;max-width:680px;text-align:left}
+.hero-details{margin:32px 0 0;max-width:680px;text-align:left}
 .hero .lede{margin:0;line-height:1.45;max-width:62ch;text-align:left}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;justify-content:flex-start;margin-top:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;justify-content:flex-start;margin-top:18px}
 .gplay img{height:56px;width:auto}
 .soon{font-size:15px;color:var(--muted)}
-.facts{display:flex;flex-wrap:wrap;gap:10px;margin:38px 0 0;padding:0;list-style:none;justify-content:flex-start}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0;padding:0;list-style:none;justify-content:flex-start}
 .facts li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:500}
+@media (min-width:901px){
+  .hero-copy{align-self:stretch;display:flex;flex-direction:column}
+  .hero-details{display:flex;flex:1;flex-direction:column}
+  .cta-row{margin-top:auto}
+  .facts{margin-bottom:auto}
+}
 .stage{position:relative;aspect-ratio:1/1.02;max-width:590px;justify-self:end;width:100%}
 .stage .photo{position:absolute;left:0;top:0;width:100%;height:auto;aspect-ratio:940/513;object-fit:contain;object-position:center;border-radius:28px;box-shadow:0 30px 60px -30px rgba(26,20,16,.45)}
 .phone{position:absolute;right:2%;bottom:0;width:clamp(200px,46%,270px);background:#1A1410;border-radius:34px;padding:10px;box-shadow:0 30px 60px -24px rgba(26,20,16,.55)}
@@ -354,16 +360,16 @@ body{overflow-x:clip}
   .top .brand .mark{width:32px;height:32px}
   .top .wm{font-size:23px}
   .top .btn{min-height:42px;padding:9px 12px;font-size:14px;white-space:nowrap;flex-shrink:0}
-  .hero{padding:64px 0 30px}
+  .hero{padding:24px 0 20px}
   .hero .wrap{gap:4px}
   .hero-copy{margin:0;text-align:left}
   .hero h1{font-size:38px;line-height:1;max-width:100%;text-align:left}
   .hero h1 .hero-line{display:block;white-space:nowrap;text-align:left}
-  .hero-details{margin:32px 0 0;max-width:100%;text-align:left}
+  .hero-details{margin:24px 0 0;max-width:100%;text-align:left}
   .hero .lede{margin:0;font-size:16px;line-height:1.35;text-align:left}
-  .cta-row{gap:8px 12px;margin-top:24px;justify-content:flex-start}
+  .cta-row{gap:8px 12px;margin-top:12px;justify-content:flex-start}
   .gplay img{height:44px}
-  .facts{gap:6px;margin-top:22px;justify-content:flex-start}
+  .facts{gap:6px;margin-top:12px;justify-content:flex-start}
   .facts li{padding:4px 9px;font-size:13px}
   .stage{display:flex;flex-direction:column;gap:8px;aspect-ratio:auto;max-width:none;margin:0 auto 8px}
   .stage .photo{position:static;width:100%;height:auto;aspect-ratio:940/513;object-fit:contain;border-radius:20px}
@@ -384,10 +390,11 @@ body{overflow-x:clip}
   .toast span{font-size:12px}
 }
 @media (max-width:380px) and (max-height:700px){
-  .hero{padding-top:10px}
+  .hero{padding-top:16px}
+  .hero-details{margin-top:16px}
   .hero h1{font-size:28px;line-height:.98}
   .hero .lede{margin-top:8px;font-size:14px;line-height:1.25}
-  .cta-row{gap:6px;margin-top:10px}
+  .cta-row{gap:6px;margin-top:8px}
   .gplay img{height:40px}
   .soon{font-size:12px}
   .facts{gap:5px;margin-top:8px}
