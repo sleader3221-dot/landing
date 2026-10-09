@@ -422,3 +422,9 @@ body{overflow-x:clip}
   .hero h1{font-size:38px;line-height:1.05}
 }
 
+@media (pointer:coarse), (max-width:760px){
+  .top .btn,.sticky-cta .btn,.mode button,.tabs button{min-height:48px}
+  .gplay{display:inline-flex;align-items:center;min-height:48px}
+  input[type=range]{height:48px}
+}
+
