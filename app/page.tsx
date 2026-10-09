@@ -46,11 +46,15 @@ export default function HomePage() {
       <Header home />
       <main id="main">
         <section className="hero" aria-labelledby="hero-title"><div className="wrap">
-          <div>
-            <h1 id="hero-title"><span className="hero-line">Order karo <span className="ds">phone se,</span></span><span className="hero-line l2"><span>Pick up karo </span><span className="ds brand-word">Dukaan<span className="se">Se</span>.</span></span></h1>
-            <p className="lede">Order from the neighbourhood kirana you already trust. Bhaiya packs it, you pick it up on your way, and Gullak coins take up to 25% off.*</p>
-            <div className="cta-row"><a className="gplay" href={CUSTOMER_APP} aria-label="Get DukaanSe on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a><span className="soon">iPhone app coming soon</span></div>
-            <ul className="facts" aria-label="Good to know"><li>No minimum order</li><li>Pick up anytime</li><li>Delivery when you need it</li></ul>
+          <div className="hero-copy">
+            <div className="hero-message">
+              <h1 id="hero-title"><span className="hero-line">Order karo <span className="ds">phone se,</span></span><span className="hero-line l2"><span className="pickup-copy">Pick up karo</span> <span className="ds brand-word">Dukaan<span className="se">Se</span>.</span></span></h1>
+            </div>
+            <div className="hero-details">
+              <p className="lede">Order from the neighbourhood kirana you already trust. Bhaiya packs it, you pick it up on your way, and Gullak coins take up to 25% off.*</p>
+              <div className="cta-row"><a className="gplay" href={CUSTOMER_APP} aria-label="Get DukaanSe on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a><span className="soon">iPhone app coming soon</span></div>
+              <ul className="facts" aria-label="Good to know"><li>No minimum order</li><li>Pick up anytime</li><li>Delivery when you need it</li></ul>
+            </div>
           </div>
           <HeroStage />
         </div></section>
@@ -135,7 +139,7 @@ export default function HomePage() {
         <section className="kiranas" id="kiranas" aria-labelledby="k-title"><div className="wrap">
           <img src="/assets/img/seller.webp" alt="A kirana owner standing proudly at his counter" width="950" height="556" loading="lazy" />
           <div>
-            <h2 id="k-title">Your <span className="heading-brand-name">Dukaan</span>. <span className="l2">Now on every phone nearby.</span></h2>
+            <h2 id="k-title">Your <span className="brand-name">Dukaan<span className="brand-se">Se</span></span>,<span className="l2">Now on every phone nearby.</span></h2>
             <p className="lede" style={{ marginTop: 20 }}>Get digital orders from your own neighbourhood, without turning your shop into a warehouse.</p>
             <ul className="perks">
               <li><strong>Zero commission</strong><span>for your first 24 months on <span className="ds brand-word">Dukaan<span className="se">Se</span></span>.</span></li>
@@ -144,7 +148,7 @@ export default function HomePage() {
               <li><strong>Discounts are on us</strong><span>Gullak coins are funded by <span className="ds brand-word">Dukaan<span className="se">Se</span></span>. You get your full price.</span></li>
             </ul>
             <div className="k-cta"><a className="gplay" href={PARTNER_APP} aria-label="Get the DukaanSe Partner app on Google Play"><img src="/assets/img/google-play-badge.png" alt="Get it on Google Play" width="188" height="56" /></a></div>
-            <p className="small">Download the <span className="download-brand-name">Dukaan<span className="download-brand-se">Se</span></span> Partner app to register your shop. Read the <Link href="/merchant-agreement/">Merchant Onboarding Agreement</Link>, or write to <a href={merchantEmailLink} target="_blank" rel="noreferrer noopener">merchants@dukaanseindia.com</a>.</p>
+            <p className="small">Download the <span className="brand-name-grey">Dukaan<span className="brand-se">Se</span></span> Partner app to register your shop. Read the <Link href="/merchant-agreement/">Merchant Onboarding Agreement</Link>, or write to <a href={merchantEmailLink} target="_blank" rel="noreferrer noopener">merchants@dukaanseindia.com</a>.</p>
           </div>
         </div></section>
 

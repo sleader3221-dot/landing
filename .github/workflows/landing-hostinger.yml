@@ -1,3 +1,5 @@
+
+
 name: Deploy Landing Page to Hostinger
 
 on:
@@ -16,12 +18,12 @@ env:
 
 jobs:
   build-landing:
-    name: Build landing page only
+    name: Build frontend only
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
-      - name: Checkout landing-page repository
+      - name: Checkout landing page repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -36,7 +38,7 @@ jobs:
       - name: Build production frontend
         run: npm run build
 
-      - name: Prepare deployment archive
+      - name: Package landing page artifact
         run: |
           rm -rf .github-deploy
           mkdir -p .github-deploy
@@ -53,7 +55,7 @@ jobs:
             next-env.d.ts \
             tsconfig.json
 
-      - name: Upload landing-page artifact
+      - name: Upload landing page artifact
         uses: actions/upload-artifact@v4
         with:
           name: landing-page-deployment
@@ -69,27 +71,27 @@ jobs:
     environment: hostinger-landing
 
     steps:
-      - name: Download production frontend artifact
+      - name: Download landing page artifact
         uses: actions/download-artifact@v4
         with:
           name: landing-page-deployment
           path: .github-deploy
 
-      - name: Install deployment tools
+      - name: Install SSH tooling
         run: |
           sudo apt-get update
           sudo apt-get install -y openssh-client
           mkdir -p "$HOME/.ssh"
           chmod 700 "$HOME/.ssh"
 
-      - name: Configure secure SSH connection
+      - name: Configure Hostinger SSH
         env:
           HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
           HOSTINGER_USER: ${{ secrets.HOSTINGER_USER }}
           HOSTINGER_SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
         run: |
           if [[ -z "$HOSTINGER_HOST" || -z "$HOSTINGER_USER" || -z "$HOSTINGER_SSH_KEY" ]]; then
-            echo "Missing Hostinger SSH secret." >&2
+            echo "Missing required Hostinger SSH secret." >&2
             exit 1
           fi
 
@@ -98,7 +100,7 @@ jobs:
           ssh-keygen -y -f "$HOME/.ssh/hostinger_key" >/dev/null
           ssh-keyscan -H "$HOSTINGER_HOST" > "$HOME/.ssh/known_hosts"
 
-      - name: Upload and deploy production frontend
+      - name: Upload and deploy landing page
         env:
           HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
           HOSTINGER_USER: ${{ secrets.HOSTINGER_USER }}
@@ -117,14 +119,15 @@ jobs:
 
           scp -i "$SSH_KEY" -o StrictHostKeyChecking=yes \
             .github-deploy/landing-page.tgz \
-            "$SSH_USER@$SSH_HOST:$WEBROOT/landing-page.tgz"
+            "$SSH_USER@$SSH_HOST:/tmp/landing-page.tgz"
 
           ssh -i "$SSH_KEY" -o StrictHostKeyChecking=yes \
             -o ServerAliveInterval=10 -o ServerAliveCountMax=6 \
             "$SSH_USER@$SSH_HOST" "set -euo pipefail
               mkdir -p '$WEBROOT'
               rm -rf '$WEBROOT'/node_modules '$WEBROOT'/package.json '$WEBROOT'/package-lock.json '$WEBROOT'/next.config.mjs '$WEBROOT'/next-env.d.ts '$WEBROOT'/tsconfig.json '$WEBROOT'/app '$WEBROOT'/components '$WEBROOT'/content '$WEBROOT'/lib '$WEBROOT'/public '$WEBROOT'/\.next
-              tar -xzf '$WEBROOT'/landing-page.tgz -C '$WEBROOT'
+              tar -xzf /tmp/landing-page.tgz -C '$WEBROOT'
+              rm -f /tmp/landing-page.tgz
               cd '$WEBROOT'
               npm ci --omit=dev --no-audit --no-fund
               if [ -f '$WEBROOT'/landing-server.pid ]; then
